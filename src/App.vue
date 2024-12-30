@@ -1,6 +1,6 @@
 <script setup>
-import NavMenu from './components/NavMenu.vue'; // Adjust the path as necessary
-import Footer from './components/Footer.vue'; //
+import NavMenu from './components/NavMenu.vue'; 
+import Footer from './components/Footer.vue'; 
 
 
 </script>
