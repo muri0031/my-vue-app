@@ -7,22 +7,22 @@ const routes = [
     {
       path: '/',
       name: 'Home',
-      component: Home, // Home component for the root path
+      component: Home, 
     },
     {
       path: '/about',
       name: 'About',
-      component: About, // About component for the /about path
+      component: About, 
     },
     {
         path: '/contact',
         name: 'Contact',
-        component: Contact, // About component for the /about path
+        component: Contact, 
       }
   ];
 
   const router = createRouter({
-    history: createWebHistory(), // Use HTML5 history mode
+    history: createWebHistory(),
     routes,
   });
 
