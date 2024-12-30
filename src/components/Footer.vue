@@ -3,7 +3,7 @@ export default {
   name: 'Footer',
   data() {
     return {
-      currentYear: new Date().getFullYear(), // Get the current year
+      currentYear: new Date().getFullYear(),
     };
   },
 };
@@ -26,31 +26,31 @@ export default {
   
 <style scoped>
 .footer {
-  background-color: #2C3E50; /* Dark background color */
-  color: white; /* Text color */
-  padding: 20px; /* Padding for the footer */
-  text-align: center; /* Center the text */
-  position: relative; /* Position relative for any absolute children */
-  bottom: 0; /* Stick to the bottom */
-  width: 100%; /* Full width */
+  background-color: #2C3E50;
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+  position: relative; 
+  bottom: 0; 
+  width: 100%; 
 }
 
 .footer-content {
-  max-width: 1200px; /* Limit the width of the footer content */
-  margin: 0 auto; /* Center the footer content */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .social-links {
-  margin-top: 10px; /* Space above social links */
+  margin-top: 10px; 
 }
 
 .social-links a {
-  color: #AED6F1; /* Link color */
-  margin: 0 10px; /* Space between links */
-  text-decoration: none; /* Remove underline */
+  color: #AED6F1; 
+  margin: 0 10px; 
+  text-decoration: none; 
 }
 
 .social-links a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline; 
 }
 </style>
