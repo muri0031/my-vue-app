@@ -12,7 +12,7 @@
     
     </div>
     <div class="button-container">
-        <router-link to="/about">
+        <router-link to="/work">
                 <button>My Work</button>
             </router-link>
             <router-link to="/contact">

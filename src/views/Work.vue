@@ -29,7 +29,7 @@ export default {
         {
           id: 'seuss-treasury',
           title: 'Seuss Treassury',
-          description: 'A React-based web app showcasing the best books of Dr. Seuss, complete with interactive features like book descriptions and quotes.',
+          description: 'A React web app showcasing the best books of Dr. Seuss, with interactive features like book descriptions and quotes.',
           image: '/seuss.jpg',
           link: 'https://link-to-projectC.com',
         },
@@ -105,7 +105,7 @@ export default {
   }
   
   h2 {
-  color: #AED6F1; /* Section heading color */
+  color: white; /* Section heading color */
   font-size: 2em; /* Font size for section headings */
   margin-bottom: 15px; /* Space below section headings */
 }
