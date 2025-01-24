@@ -101,7 +101,6 @@ export default {
   section {
     margin: 40px 0;
     padding: 20px; /* Add padding to sections */
-  background-color: rgba(44, 62, 80, 0.8); /* Slightly transparent background */
   border-radius: 8px; /* Rounded corners */
   }
   
@@ -123,11 +122,12 @@ export default {
   background-color: #34495E; /* Card background color */
   border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* Hide overflow */
-  transition: transform 0.3s; /* Smooth hover effect */
+  transition: transform 0.3s,  box-shadow 0.3s; /* Smooth hover effect */
 }
 
 .project-card:hover {
   transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 .project-card img {
   width: 100%; /* Full width for images height: auto; /* Maintain aspect ratio */
@@ -156,9 +156,6 @@ export default {
   transition: background-color 0.3s; /* Smooth hover effect */
 }
 
-.project-card a:hover {
-  background-color: #2C3E50; /* Darker background on hover */
-  color: white; /* Change text color on hover */
-}
+
 
   </style>

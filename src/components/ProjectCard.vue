@@ -19,12 +19,12 @@ export default {
   
   <style scoped>
   .project-card {
-    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
     margin: 10px;
     width: 300px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   
   .project-card img {
