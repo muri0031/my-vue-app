@@ -2,6 +2,9 @@ import {createWebHistory, createRouter} from 'vue-router';
 import Home from '../views/Home.vue'; // Correct import
 import About from '../views/About.vue';
 import Contact from '../views/Contact.vue';
+import Work from '../views/Work.vue';
+import ProjectDetail from '../views/ProjectDetail.vue';
+
 
 const routes = [
     {
@@ -18,7 +21,17 @@ const routes = [
         path: '/contact',
         name: 'Contact',
         component: Contact, // About component for the /about path
-      }
+      },
+      {
+        path: '/work',
+        name: 'Work',
+        component: Work, // About component for the /about path
+      },
+      {
+        path: '/projects/:id', // Dynamic route for project details
+        name: 'ProjectDetail',
+        component: ProjectDetail,
+      },
   ];
 
   const router = createRouter({
