@@ -12,13 +12,13 @@ export default {
   },
   methods: {
     handleSubmit() {
-      // Here you can handle the form submission, e.g., send the data to an API
+      
       console.log('Form submitted:', {
         name: this.name,
         email: this.email,
         message: this.message,
       });
-      this.submitted = true; // Show a success message or reset the form
+      this.submitted = true; 
       this.resetForm();
     },
     resetForm() {
@@ -99,35 +99,35 @@ export default {
 <style scoped>
 
 .header-image {
-  flex: 1; /* Allow the header-image section to take up space */
+  flex: 1; 
   display: flex;
-  flex-direction: column; /* Stack h1 and image vertically */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column; 
+  align-items: center; 
 }
 
 
 .image-about {
-  width: 100%; /* Full width for the image container */
+  width: 100%; 
 }
 
 .image-about img {
   width: 100%; 
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: rounded corners */
+  height: auto; 
+  border-radius: 8px; 
 }
 .contact-page {
-  max-width: 1200px;  min-height: 100vh;margin: 0 auto; /* Center the container */
+  max-width: 1200px;  min-height: 100vh;margin: 0 auto;
   min-height: 100vh; 
-  padding: 20px; /* Add some padding */
-  margin: 0 auto; /* Center the container */
-  color: white; /* Text color */
+  padding: 20px; 
+  margin: 0 auto;
+  color: white; 
 }
 .info-container {
-  display: flex; /* Use flexbox to align items in a row */
-  justify-content: space-between; /* Space between the two sections */
-  margin-top: 20px; /* Space above the info container */
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px; 
   min-height: 100%;
-   /* Center items vertically */
+  
 }
 .p-info{
     text-align:left;
@@ -135,22 +135,21 @@ export default {
     padding-left:20px;
 }
 .social-media {
-  flex: 1; /* Allow the social media section to take up space */
-   /* Space between social media and contact form */
-  padding: 20px; /* Padding inside the social media section */ /* Rounded corners */
+  flex: 1; 
+  padding: 20px; 
   display: flex;
   flex-direction: column;
 }
 
 .contact-container {
-  flex: 1; /* Allow the contact form section to take up 2/3 of the space */
-  background-color: #2C3E50; /* Background color */
-  padding: 20px; /* Add some padding */
-  border-radius: 8px; /* Rounded corners */
+  flex: 1; 
+  background-color: #2C3E50; 
+  padding: 20px; 
+  border-radius: 8px; 
 }
 h1 {
-  text-align: center; /* Center the heading */
-  color: #AED6F1; /* Heading color */
+  text-align: center; 
+  color: #AED6F1; 
   font-size:3em;
   margin-bottom: 5px;
 }
@@ -159,66 +158,64 @@ h2{
 }
 
 .form-group {
-  margin-bottom: 15px; /* Space between form groups */
+  margin-bottom: 15px; 
 }
 
 label {
-  display: block; /* Make labels block elements */
-  margin-bottom: 5px; /* Space below labels */
+  display: block;
+  margin-bottom: 5px;
   margin-top: 0px;
 }
 
 input,
 textarea {
-  width: 95%; /* Full width */
-  padding: 10px; /* Padding inside inputs */
-  border: 1px solid #AED6F1; /* Border color */
-  border-radius: 4px; /* Rounded corners */
-  background-color: #34495E; /* Input background color */
-  color: white; /* Input text color */
+  width: 95%; 
+  padding: 10px;
+  border: 1px solid #AED6F1; 
+  border-radius: 4px; 
+  background-color: #34495E; 
+  color: white; 
 }
 
 input:focus,
 textarea:focus {
-  border-color: #AED6F1; /* Change border color on focus */
-  outline: none; /* Remove default outline */
+  border-color: #AED6F1; 
+  outline: none; 
 }
 
 .submit-button {
-  width: 95%; /* Full width */
-  padding: 10px; /* Padding inside button */
-  border: none; /* Remove border */
-  border-radius: 4px; /* Rounded corners */
-  background-color: #AED6F1; /* Button background color */
-  color: #2C3E50; /* Button text color */
-  font-size: 1.2em; /* Button font size */
-  cursor: pointer; /* Pointer cursor on hover */
+  width: 95%; 
+  padding: 10px; 
+  border: none; 
+  border-radius: 4px; 
+  background-color: #AED6F1; 
+  color: #2C3E50;
+  font-size: 1.2em; 
+  cursor: pointer; 
 }
 
 .submit-button:hover {
-  background-color: #2C3E50; /* Darker background on hover */
-  color: white; /* Change text color on hover */
+  background-color: #2C3E50; 
+  color: white; 
 }
 
 .success-message {
-  margin-top: 20px; /* Space above success message */
-  text-align: center; /* Center the success message */
-  color: #AED6F1; /* Success message color */
+  margin-top: 20px;
+  text-align: center; 
+  color: #AED6F1; 
 }
 p {
- /* Set the color for paragraph text */
-  text-align: center; /* Center-align the text */
+  text-align: center; 
 }
-/* Additional styles for social media links */
 .social-media a {
-  color: #AED6F1; /* Icon and link color */
-  text-decoration: none; /* Remove underline from links */
-  display: flex; /* Flexbox for icon and text alignment */
-  align-items: center; /* Center the icon and text vertically */
+  color: #AED6F1;
+  text-decoration: none; 
+  display: flex;
+  align-items: center;
 }
 
 .social-media a i {
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px; 
 }
 ul li{
     list-style:none;

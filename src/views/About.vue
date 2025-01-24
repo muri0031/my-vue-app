@@ -23,7 +23,7 @@ export default {
         <img src="/karla.png" alt="About Me" />
       </div>
     </div>
-    <!-- Button to Contact Page -->
+
     <div class="button-container">
       <router-link to="/contact">
         <button class="primary-button">Contact Me</button>
@@ -33,32 +33,32 @@ export default {
 
   <!-- Banner Section -->
   <div class="banner">
-    <h1>Turning your ideas into code, no console errors included!</h1> <!-- Slogan -->
+    <h1>Turning your ideas into code, no console errors included!</h1> 
   </div>
 </template>
 
 <style>
 
 .banner {
-  background-color: #AED6F1; /* Dark background for the banner */
-  padding: 40px; /* Padding around the banner */
-  text-align: center; /* Center the text */
-  border-radius: 0; /* Remove rounded corners */
-  margin: 20px 0;/* Space above the banner */
-  width: 100%; /* Stretch the banner horizontally */
-  position: relative; /* Ensure it fits within the layout */
+  background-color: #AED6F1; 
+  padding: 40px;
+  text-align: center; 
+  border-radius: 0; 
+  margin: 20px 0;
+  width: 100%;
+  position: relative; 
 }
 
 .banner h1 {
-  font-family: 'Nunito', sans-serif; /* Use a clean font */
-  font-size: 2.5em; /* Font size for the slogan */
-  color: #2C3E50; /* Light color for contrast */
-  margin: 0; /* Remove default margin */
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.5em; 
+  color: #2C3E50; 
+  margin: 0; 
 }
 .about-container {
-  max-width: 1000px; /* Limit the width of the content */
-  margin: 0 auto; /* Center the container */
-  padding: 20px; /* Add some padding */
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 20px; 
 color: white;
 }
 
@@ -70,40 +70,40 @@ color: white;
 
 
 h2 {
-  font-family: 'Nunito', sans-serif; /* Use a clean font */
-  font-size: 1.8em; /* Slightly smaller than h1 */
-  color:white; /* Darker shade for the subheading */
-  text-align: left; /* Center the subheading */
-  margin-bottom: 20px; /* Space below the subheading */
+  font-family: 'Nunito', sans-serif; 
+  font-size: 1.8em; 
+  color:white;
+  text-align: left; 
+  margin-bottom: 20px; 
 }
 
 .content-row {
-  display: flex; /* Use Flexbox to align items in a row */
-  align-items: center; /* Center items vertically */
-  margin-top: 20px; /* Space above the content row */
+  display: flex; 
+  align-items: center; 
+  margin-top: 20px; 
 }
 
 .text-content {
-  flex: 1; /* Allow text to take the remaining space */
-  margin-right: 20px; /* Space between text and image */
+  flex: 1; 
+  margin-right: 20px; 
 }
 
 .image-about {
-  flex: 0 0 150px; /* Fixed width for the image container */
+  flex: 0 0 150px; 
 }
 
 .image-about img {
-  width: 200%; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: rounded corners */
+  width: 200%; 
+  height: auto; 
+  border-radius: 8px;
 }
 
 p {
-  font-family: 'Inter', sans-serif; /* Use a clean font */
-  font-size: 1.3em; /* Standard font size for paragraphs */
-  line-height: 1.6; /* Increase line height for readability */
-  color:white; /* Dark gray for text */
-  margin-bottom: 15px; /* Space below paragraphs */
+  font-family: 'Inter', sans-serif; 
+  font-size: 1.3em; 
+  line-height: 1.6; 
+  color:white; 
+  margin-bottom: 15px; 
  
 }
 
@@ -113,9 +113,9 @@ p {
   font-weight:900;
 }
 .button-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center buttons horizontally */
-  margin-top: 20px; /* Space above the buttons */
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px;
 }
 .primary-button{
 position: relative;
