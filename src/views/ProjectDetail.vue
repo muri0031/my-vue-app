@@ -19,14 +19,42 @@ export default {
           title: 'My Portfolio',
           description: 'My portfolio is a project I built from scratch! ✨ I started with research to understand my target audience and then picked the perfect colors and typography to match the vibe. I created mood boards, wireframes, and a prototype to plan everything out. Finally, I brought it to life using HTML, CSS, and JavaScript. It’s a space where I can showcase my work and creativity!',
           image: '/my-portfolio.jpg',
-          link: 'https://karla-murillo.netlify.app',
+          link: 'https://https://www.figma.com/design/or85Fy6cqOvEy4vueyPELV/Live-home-hi-fi-mobile?node-id=202-3957&t=gD5ktCCAuF0pxwiL-1',
         },
         {
           id: 'live-home',
           title: 'Live Home',
           description: 'LiveHome was a team project where I played a key role in the initial stages. I conducted research, created problem statements, and developed personas to guide our design process. Later, I collaborated with my team on wireframes and prototypes to build the project. It was a great experience working together to create something meaningful!" 😊',
-          image: 'path/to/imageB.jpg',
-          link: 'https://link-to-projectB.com',
+          image: '/livehome.png',
+          link: 'https://www.figma.com/design/or85Fy6cqOvEy4vueyPELV/Live-home-hi-fi-mobile?node-id=202-3957&t=gD5ktCCAuF0pxwiL-1',
+          caseStudy: {
+            purpose: "The goal of LiveHome is to design an app interface that lets homeowners monitor and manage their IoT devices remotely. This will help them increase their home’s security, efficiency, and convenience, giving them peace of mind and better control over their living spaces.",
+            timeline: "The project ran from May 29th to August 14th, spanning Weeks 4 to 15 of our class schedule.",
+            targetMarket: "Homeowners who want better control and security, landlords/tenants managing shared spaces, and small businesses looking to monitor their properties remotely.",
+            userBenefits: [
+              "Increased Security Monitoring: Keep an eye on your property from anywhere.",
+              "Flexibility: Control devices remotely.",
+              "Convenience: Manage everything from one app.",
+              "Peace of Mind: Notifications and alarms alert you to potential problems."
+            ],
+            keyMessage: "Stay connected to your home from anywhere, ensuring security, efficiency, and peace of mind with our intuitive IoT interface.",
+            uniqueSellingPoint: "LiveHome stands out by offering real-time monitoring and diagnostics of your home’s critical systems and structures, along with personalized maintenance recommendations and predictive alerts.",
+            problemStatement: {
+              affected: "Homeowners, tenants, and landlords.",
+              problem: "They want real-time supervision of their properties.",
+              location: "Over their property.",
+              when: "When they’re away.",
+              importance: "Unsupervised properties can attract burglars or face preventable issues.",
+              finalStatement: "Homeowners, tenants, and landlords worry about problems that can happen when they’re not at home. These issues include open doors, stoves left on, and lights left on, which can damage the property. Disturbances in shared areas like parking lots and hallways also cause concern. Everyone needs a way to monitor their properties in real-time to identify and fix issues quickly when they’re not present."
+            },
+            images: {
+              persona1: '/persona1live.jpg',
+              persona2: '/persona2live.jpg',
+              persona3: '/persona3live.jpg',
+              moodboard: '/moodboardlive.jpg',
+              appFlow: '/appflowlive.jpg'
+            }
+          }
         },
         {
           id: 'seuss-treasury',
@@ -58,28 +86,65 @@ export default {
 };
 </script>
 
-
 <template>
-     
     <div class="project-detail-container">
-        <div class="button-container">
-          <router-link to="/work" class="go-back-button">Go Back</router-link>
-        </div>
-    <div class="project-detail">
-      <div class="image-container"> 
-        <img :src="project.image" alt="Project Image" />
+      <div class="button-container">
+        <router-link to="/work" class="go-back-button">Go Back</router-link>
       </div>
-      <div class="description-container">
-        <h1>{{ project.title }}</h1>
-        <p>{{ project.description }}</p>
-        <a :href="project.link" target="_blank" class="view-project-button">View Project</a>
+      <div class="project-detail">
+        <div class="image-container"> 
+          <img :src="project.image" alt="Project Image" />
+        </div>
+        <div class="description-container">
+          <h1>{{ project.title }}</h1>
+          <p>{{ project.description }}</p>
+          <a :href="project.link" target="_blank" class="view-project-button">View Project</a>
+        </div>
       </div>
     </div>
-  </div>
+      <!-- Case Study Section for LiveHome -->
+      <div v-if="project.id === 'live-home'" class="case-study">
+        <h2>Case Study Details</h2>
+        <h3>Purpose of the Project</h3>
+        <p>{{ project.caseStudy.purpose }}</p>
+        
+        <h3>Project Timeline</h3>
+        <p>{{ project.caseStudy.timeline }}</p>
+        
+        <h3>Target Market</h3>
+        <p>{{ project.caseStudy.targetMarket }}</p>
+        
+        <h3>User Benefits</h3>
+        <ul>
+          <li v-for="benefit in project.caseStudy.userBenefits" :key="benefit">{{ benefit }}</li>
+        </ul>
+        
+        <h3>Key Message</h3>
+        <p>{{ project.caseStudy.keyMessage }}</p>
+        
+        <h3>Unique Selling Point (USP)</h3>
+        <p>{{ project.caseStudy.uniqueSellingPoint }}</p>
+        <h3>Problem Statement</h3>
+    <p>{{ project.caseStudy.problemStatement.finalStatement }}</p>
+      </div>
+       <!-- Display Images for Personas and Moodboard -->
+    <div v-if="project.id === 'live-home'" class="images-container">
+      <h2>Personas</h2>
+      <div class="persona-images">
+        <img :src="project.caseStudy.images.persona1" alt="Persona 1" />
+        <img :src="project.caseStudy.images.persona2" alt="Persona 2" />
+        <img :src="project.caseStudy.images.persona3" alt="Persona 3" />
+      </div>
+      <h2>Moodboard</h2>
+      <img :src="project.caseStudy.images.moodboard" alt="Moodboard" />
+      <h2>App Flow</h2>
+      <img :src="project.caseStudy.images.appFlow" alt="App Flow" />
+    </div>
   </template>
 
   
 <style scoped>
+
 .project-detail-container {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -153,44 +218,50 @@ export default {
   transform: scale(1.05); /* Slightly scale up on hover */
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
-
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) { /* Tablet and smaller */
-  .project-detail {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-  }
-
-  .image-container {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
-    flex: none; /* Reset flex property */
-  }
-
-  .description-container {
-    flex: none; /* Reset flex property */
-    text-align: center; /* Center text */
-  }
-
-  .go-back-button {
-    font-size: 1.1em; /* Smaller font size */
-  }
-
-  .view-project-button {
-    font-size: 1em; /* Smaller font size */
-  }
+.case-study{
+    width: 80%;
+    margin-left:15%;
 }
 
-@media (max-width: 480px) { /* Phone size */
-  .go-back-button {
-    font-size: 1em; /* Smaller font size */
-  }
-
-  .view-project-button {
-    padding: 8px 16px; /* Adjust padding for smaller buttons */
-    font-size: 0.9em; /* Smaller font size */
-  }
+h3{
+    color: #AED6F1;
 }
+h2{
+    text-align: center;
+}
+
+.images-container{
+    width:80%;
+}
+.images-container {
+  width:70%; 
+  margin-left: 15%; /* Center the images section */
+  margin-top: 20px; /* Space above the images section */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+}
+
+.persona-images {
+  justify-content: center; /* Center the images */
+  margin-bottom: 20px; /* Space below the persona images */
+  margin-bottom: 20px;
+}
+
+.persona-images img {
+    width: 200px; /* Set a fixed width for persona images */
+    height: 400;
+  border-radius: 8px; /* Rounded corners for images */
+  object-fit: cover; /* Maintain aspect ratio while filling the box */
+  margin: 0 10px; /* Space between images */
+}
+
+.images-container img {
+  width: 100%; /* Full width for moodboard and app flow images */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-top: 10px; /* Space above the images */
+}
+
+
+
 
 </style>
