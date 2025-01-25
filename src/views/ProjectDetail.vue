@@ -262,6 +262,55 @@ h2{
 }
 
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .project-detail {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .image-container {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .description-container {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .go-back-button, .view-project-button {
+    font-size: 1em; /* Adjust button font size */
+  }
+
+  .persona-images {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    align-items: center; /* Center images horizontally */
+  }
+
+  .persona-images img {
+    margin: 10px 0; /* Space between images */
+    width: 80%; /* Adjust width for smaller screens */
+  }
+  .go-back-button {
+    display: none; /* Hide the button */
+  }
+}
+
+@media (max-width: 480px) {
+  .go-back-button, .view-project-button {
+    font-size: 0.9em; /* Further reduce button font size */
+  }
+
+  .case-study {
+    width: 90%; /* Make case study section wider */
+    margin-left: 5%; /* Center it */
+  }
+
+  .images-container {
+    width: 90%; /* Make images section wider */
+    margin-left: 5%; /* Center it */
+  }
+}
 
 
 </style>
