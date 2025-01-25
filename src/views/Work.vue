@@ -157,5 +157,35 @@ export default {
 }
 
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em; /* Smaller font size for tablet */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Smaller section heading size */
+  }
+
+  .project-card {
+    flex: 1 1 calc(45% - 20px); /* Adjust card width for tablets */
+    max-width: none; /* Remove max width for better responsiveness */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Further reduce font size for mobile */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Further adjust section heading size */
+  }
+
+  .project-card {
+    flex: 1 1 100%; /* Full width for project cards on mobile */
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
+}
 
   </style>

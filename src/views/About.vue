@@ -143,4 +143,63 @@ transition: .3s;
 strong {
   color:  #AED6F1;
 }
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2em; /* Smaller font size for mobile */
+  }
+
+  .about-container h1 {
+    font-size: 1.5em; /* Adjust heading size */
+  }
+
+  .content-row {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .text-content {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+
+  .image-about {
+    flex: 0 0 100%; /* Full width for image */
+    text-align: center; /* Center image */
+  }
+
+  .image-about img {
+    width: 100%; /* Make image responsive */
+    height: auto; 
+  }
+
+  p {
+    font-size: 1.1em; /* Smaller font size for paragraphs */
+  }
+
+  .primary-button {
+    width: 100%; /* Full width button */
+    font-size: 1.2em; /* Smaller font size for button */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 1.5em; /* Even smaller font size for very small screens */
+  }
+
+  .about-container h1 {
+    font-size: 1.3em; /* Further adjust heading size */
+  }
+
+  p {
+    font-size: 1em; /* Further reduce paragraph font size */
+  }
+
+  .primary-button {
+    font-size: 1em; /* Further reduce button font size */
+  }
+}
     </style>

@@ -153,4 +153,44 @@ export default {
   transform: scale(1.05); /* Slightly scale up on hover */
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) { /* Tablet and smaller */
+  .project-detail {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .image-container {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+    flex: none; /* Reset flex property */
+  }
+
+  .description-container {
+    flex: none; /* Reset flex property */
+    text-align: center; /* Center text */
+  }
+
+  .go-back-button {
+    font-size: 1.1em; /* Smaller font size */
+  }
+
+  .view-project-button {
+    font-size: 1em; /* Smaller font size */
+  }
+}
+
+@media (max-width: 480px) { /* Phone size */
+  .go-back-button {
+    font-size: 1em; /* Smaller font size */
+  }
+
+  .view-project-button {
+    padding: 8px 16px; /* Adjust padding for smaller buttons */
+    font-size: 0.9em; /* Smaller font size */
+  }
+}
+
 </style>

@@ -222,4 +222,59 @@ p {
 ul li{
     list-style:none;
 }
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .social-media {
+    padding: 10px; /* Reduce padding */
+  }
+
+  h1 {
+    font-size: 2.5em; /* Smaller font size for mobile */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Adjust heading size */
+  }
+
+  .form-group {
+    margin-bottom: 10px; /* Reduce margin */
+  }
+
+  .submit-button {
+    font-size: 1em; /* Smaller button font size */
+  }
+
+  .p-info {
+    padding-left: 10px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Further reduce font size for very small screens */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Further adjust heading size */
+  }
+
+  input,
+  textarea {
+    width: 90; /* Full width for inputs */
+  }
+
+  .submit-button {
+    width: 90; /* Full width button */
+  }
+
+  .p-info {
+    padding-left: 5px; /* Further reduce padding */
+  }
+}
 </style>
