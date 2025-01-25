@@ -304,7 +304,6 @@ h2{
   .case-study {
     width: 90%; /* Make case study section wider */
     margin-left: 5%; /* Center it */
-    text-align: center;
   }
 
   .images-container {
