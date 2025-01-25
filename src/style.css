@@ -401,6 +401,9 @@ transform: translate(95vw,90vh);
 }
 
 @media (max-width: 480px) { /* Mobile */
+  body{
+    background-color: #000000;
+  }
   .header {
     font-size: 2.5em; /* Smaller font size for mobile */
   }
