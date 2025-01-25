@@ -12,12 +12,8 @@ export default {
   },
   methods: {
     handleSubmit() {
-      
-      console.log('Form submitted:', {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      });
+      const mailtoLink = `mailto:karlitam21@hotmail.com?subject=Message from ${this.name}&body=${encodeURIComponent(this.message)}%0D%0AFrom: ${this.email}`;
+      window.location.href = mailtoLink; // Open the email client
       this.submitted = true; 
       this.resetForm();
     },
