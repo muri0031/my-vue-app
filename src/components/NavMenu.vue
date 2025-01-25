@@ -59,5 +59,6 @@ padding-right: 100px;
   background-color:#2C3E50;
   padding: 10px;
   border-radius: 5px;
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
   </style>

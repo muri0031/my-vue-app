@@ -5,6 +5,10 @@ export default {
 </script>
 
 <template>
+   <!-- Banner Section -->
+   <div class="banner">
+    <h1>Turning your ideas into code, no console errors included!</h1> 
+  </div>
   <div class="about-container">
     <h1>Hi there! 👋🏻</h1>
     <div class="content-row">
@@ -31,10 +35,6 @@ export default {
     </div>
   </div>
 
-  <!-- Banner Section -->
-  <div class="banner">
-    <h1>Turning your ideas into code, no console errors included!</h1> 
-  </div>
 </template>
 
 <style>
@@ -47,6 +47,7 @@ export default {
   margin: 20px 0;
   width: 100%;
   position: relative; 
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 
 .banner h1 {
@@ -119,25 +120,25 @@ p {
 }
 .primary-button{
 position: relative;
-border: 2px solid white;
 font-family: 'Nunito', sans-serif;
-color: #AED6F1;
+color: #2C3E50;
 width: 150px;
 height: 50px;
 font-size: 1.5em;
 border-radius: 15px;
 margin: 0 10px;
 transition: .3s;
+background-color: #AED6F1;
+border: none; /* Add this line to remove the border */
 
 }
 
 .primary-button:hover{
-border: 2px solid #2C3E50;
-background-color:white;
+background-color:#2C3E50;
 cursor: pointer;
-color: #AED6F1;
+color:white;
 transition: .3s;
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
 }
 strong {
   color:  #AED6F1;

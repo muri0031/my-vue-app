@@ -33,6 +33,7 @@ export default {
   position: relative; 
   bottom: 0; 
   width: 100%; 
+  
 }
 
 .footer-content {

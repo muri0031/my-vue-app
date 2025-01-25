@@ -192,6 +192,8 @@ textarea:focus {
   color: #2C3E50;
   font-size: 1.2em; 
   cursor: pointer; 
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.5);
+  transition: box-shadow 0.3s;
 }
 
 .submit-button:hover {

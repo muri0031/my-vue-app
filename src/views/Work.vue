@@ -20,7 +20,7 @@ export default {
           id: 'live-home',
           title: 'Live Home',
           description: 'A conceptual UX design project focusing on modern, user-friendly interfaces for a real estate platform.',
-          image: 'path/to/imageB.jpg',
+          image: '/livehome.png',
           link: 'https://link-to-projectB.com',
         },
      
@@ -31,21 +31,21 @@ export default {
           title: 'Seuss Treassury',
           description: 'A React web app showcasing the best books of Dr. Seuss, with interactive features like book descriptions and quotes.',
           image: '/seuss.jpg',
-          link: 'https://link-to-projectC.com',
+         link: 'seusstreasury.netlify.app',
         },
         {
           id: 'contact-book',
           title: 'Contact Book',
           description: 'A React app with Firebase integration for managing contact information. Features add, edit, and delete functionality.',
           image: '/contact.jpg',
-          link: 'https://link-to-projectD.com',
+          link: 'contactbookvue.netlify.app',
         },
         {
           id: 'movies-review',
           title: 'Movies Review',
           description: 'A dynamic website using Vue and Strapi to manage and display movie reviews with a seamless browsing experience.',
           image: '/MoviesReview.jpg',
-          link: 'https://link-to-projectD.com',
+         link: 'headlesscms-moviesreviews.netlify.app',
         },
 
       ],

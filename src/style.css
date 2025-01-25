@@ -12,7 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html, body {
-  height: 100%;
+  height: 100%; /* Ensure both html and body take full height */
   margin: 0;
 }
 
@@ -21,7 +21,7 @@ body {
   margin: 0;
   height: 100vh;
   font-weight: 100;
-  background: radial-gradient(#2C3E50 ,#000000);
+  background: radial-gradient(#000000);
   -webkit-overflow-Y: hidden;
   -moz-overflow-Y: hidden;
   -o-overflow-Y: hidden;
@@ -33,33 +33,34 @@ body {
 }
 
 .button-container {
-  display: flex; 
-  justify-content: space-around; 
-  margin-top: 20px; 
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Center buttons horizontally */
+  margin-top: 20px; /* Space above the buttons */
 }
 
 button{
 position: relative;
-border: 2px solid white;
 font-family: 'Nunito', sans-serif;
-color: white;
+color:#2C3E50;
 width: 250px;
 height: 50px;
 font-size: 2em;
 border-radius: 15px;
 margin: 0 10px;
 transition: .3s;
-background-color: #2C3E50;
+background-color: #AED6F1;
+border: none; /* This will remove the border from all buttons */
+  outline: none;
 }
 
 button:hover{
-border: 2px solid #2C3E50;
-background-color: #AED6F1;
+background-color: #2C3E50;
 cursor: pointer;
-color: white;
+color:white;
 opacity: 8;
 transition: .3s;
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+transform: scale(1.05); /* Scale up on hover */
+box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 
 /*Background*/
@@ -229,41 +230,41 @@ outline: none;
 
 /* Header*/
 .content-wrapper {
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: center; 
-  height: 100vh; 
-  margin: 0;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
   padding-top: 105px;
 }
 
 .head-container {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  text-align: center; 
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
   margin-bottom: 20px;
 }
 .header{
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   color: white;
-  padding: 4px; 
-  margin: 0;
+  padding: 4px; /* Reduced padding to bring headers closer */
+  margin: 0; /* Remove default margin */
   font-size: 4.3em;
-  opacity: 0;
-  animation: fadeIn 1s forwards; 
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s forwards; /* Fade in animation */
 }
 
 .welcome-text {
-  color: white; 
+  color: white; /* Set color for welcome text */
  
   
 }
 
 .name-text {
-  color: #AED6F1; 
+  color: #AED6F1; /* Set color for name text */
   
   margin-left: 20px;
 }
@@ -276,16 +277,16 @@ animation: fadeIn 1s forwards;
 }
 
 #head1{
-  animation-delay: 0s; 
+  animation-delay: 0s; /* No delay for the first header */
 }
 
 #head2{
-  animation-delay: 3s;
+  animation-delay: 3s; /* Delay for the second header */
 }
 
 
 #head3{
-  animation-delay: 6s; 
+  animation-delay: 6s; /* Delay for the third header */
 }
 
 

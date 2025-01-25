@@ -62,15 +62,15 @@ export default {
   border-radius: 4px; /* Rounded corners */
   transition: background-color 0.3s; /* Smooth hover effect */
   margin-top: 10px; /* Space above the link */
+  font-weight: 400;
 }
 
 .project-link:hover {
-  background-color: #2C3E50; /* Darker background on hover */
-  color: white; /* Change text color on hover */
-  transform: scale(1.05);
+  background-color: #2C3E50;
+color:white;
+box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 .project-link.clicked {
   color: #2C3E50;
 }
-
   </style>

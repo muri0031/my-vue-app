@@ -19,7 +19,7 @@ export default {
           title: 'My Portfolio',
           description: 'My portfolio is a project I built from scratch! ✨ I started with research to understand my target audience and then picked the perfect colors and typography to match the vibe. I created mood boards, wireframes, and a prototype to plan everything out. Finally, I brought it to life using HTML, CSS, and JavaScript. It’s a space where I can showcase my work and creativity!',
           image: '/my-portfolio.jpg',
-          link: 'https://link-to-projectA.com',
+          link: 'https://karla-murillo.netlify.app',
         },
         {
           id: 'live-home',
@@ -33,21 +33,21 @@ export default {
           title: 'Seuss Treasury',
           description: 'Welcome to the Seuss Treasury! I built this website with React, and it’s all about showcasing the best Dr. Seuss books. Using React Router, I created dynamic pages for each book, so you can explore descriptions and quotes effortlessly. The data is pulled from APIs, making the content interactive. It’s a fun way to dive into the magical world of Dr. Seuss😊',
           image: '/seuss.jpg',
-          link: 'seusstreasury.netlify.app',
+          link: 'https://seusstreasury.netlify.app', 
         },
         {
           id: 'contact-book',
           title: 'Contact Book',
           description: 'Check out my Contact Book app! 🌟 It is built with Vue and lets you easily add, edit, and delete contacts. All the contact info is stored using local storage, keeping it simple and accesible. I also used Vue Router to create dynamic pages that make the app smooth to navigate. It is simple, clean, and fun to use',
           image: '/contact.jpg',
-          link: 'contactbookvue.netlify.app',
+          link: 'https://contactbookvue.netlify.app', 
         },
         {
           id: 'movies-review',
           title: 'Movies Review',
           description: 'My Movies Review app is a two-part project! 🎬 For the front end, I used Vue to create a clean and responsive UI, and Vue Router to dynamically generate pages for each movie. On the back end, I used Strapi to manage all the movie data and reviews. It’s an interactive way to explore movies and their reviews!😊',
           image: '/MoviesReview.jpg',
-          link: 'headlesscms-moviesreviews.netlify.app',
+          link: 'https://headlesscms-moviesreviews.netlify.app',
         },
       ];
 
@@ -143,11 +143,14 @@ export default {
   border-radius: 8px; /* Rounded corners */
   font-size: 1.2em; /* Font size */
   transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  font-weight:400;
+  text-align: center;
 }
 
 .view-project-button:hover {
   background-color: #2C3E50; /* Darker background on hover */
   color: white; /* Change text color on hover */
   transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 </style>
