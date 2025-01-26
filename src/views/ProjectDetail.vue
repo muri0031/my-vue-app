@@ -539,6 +539,39 @@ h2{
     font-size: 1em; 
   }
 
+  /*audience*/
+  .audience-research-table {
+    display: block; 
+    overflow-x: auto; 
+  }
+
+  .audience-research-table thead {
+    display: none; 
+  }
+
+  .audience-research-table tr {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px; 
+    border: 1px solid #2C3E50; 
+    border-radius: 8px; 
+    padding: 10px; 
+    background-color: rgba(44, 62, 80, 0.9);
+  }
+
+  .audience-research-table td {
+    text-align: left; 
+    border: none;
+    padding: 5px; 
+  }
+
+  .audience-research-table td::before {
+    content: attr(data-label); 
+    font-weight: bold; 
+    display: inline-block; 
+    margin-right: 10px; 
+  }
+
   /***********************live home page******************************/
 
   .persona-images {
