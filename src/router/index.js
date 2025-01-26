@@ -1,5 +1,5 @@
 import {createWebHistory, createRouter} from 'vue-router';
-import Home from '../views/Home.vue'; // Correct import
+import Home from '../views/Home.vue'; 
 import About from '../views/About.vue';
 import Contact from '../views/Contact.vue';
 import Work from '../views/Work.vue';
@@ -10,32 +10,32 @@ const routes = [
     {
       path: '/',
       name: 'Home',
-      component: Home, // Home component for the root path
+      component: Home, 
     },
     {
       path: '/about',
       name: 'About',
-      component: About, // About component for the /about path
+      component: About, 
     },
     {
         path: '/contact',
         name: 'Contact',
-        component: Contact, // About component for the /about path
+        component: Contact, 
       },
       {
         path: '/work',
         name: 'Work',
-        component: Work, // About component for the /about path
+        component: Work, 
       },
       {
-        path: '/projects/:id', // Dynamic route for project details
+        path: '/projects/:id', 
         name: 'ProjectDetail',
         component: ProjectDetail,
       },
   ];
 
   const router = createRouter({
-    history: createWebHistory(), // Use HTML5 history mode
+    history: createWebHistory(), 
     routes,
   });
 

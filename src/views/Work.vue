@@ -14,14 +14,12 @@ export default {
           title: 'My Portfolio',
           description: 'Showcases my web design and development skills with a clean, responsive, and professional interface.',
           image: '/my-portfolio.jpg',
-          link: 'https://link-to-projectA.com',
         },
         {
           id: 'live-home',
           title: 'Live Home',
           description: 'A conceptual UX design project focusing on modern, user-friendly interfaces for a real estate platform.',
           image: '/livehome.png',
-          link: 'https://link-to-projectB.com',
         },
      
       ],
@@ -31,7 +29,6 @@ export default {
           title: 'Seuss Treassury',
           description: 'A React web app showcasing the best books of Dr. Seuss, with interactive features like book descriptions and quotes.',
           image: '/seuss.jpg',
-         link: 'seusstreasury.netlify.app',
         },
         {
           id: 'contact-book',
@@ -84,31 +81,31 @@ export default {
   </template>
   
   <style scoped>
+    
+    h1 {
+    text-align: center;
+    color: #AED6F1; 
+  font-size: 3em;
+  margin-bottom: 20px; 
+  }
+
+    h2 {
+  color: white; 
+  font-size: 2em; 
+  margin-bottom: 15px; 
+}
   .work-page {
     padding: 20px;
-    max-width: 1200px; /* Limit the width of the page */
-  margin: 0 auto; /* Center the page */
-  color: white; /* Text color */
+    max-width: 1200px;
+  margin: 0 auto; 
+  color: white; 
   }
-  
-  h1 {
-    text-align: center;
-    color: #AED6F1; /* Heading color */
-  font-size: 3em;
-  margin-bottom: 20px; /* Space below the main heading */
-  }
-  
   section {
     margin: 40px 0;
-    padding: 20px; /* Add padding to sections */
-  border-radius: 8px; /* Rounded corners */
+    padding: 20px; 
+  border-radius: 8px; 
   }
-  
-  h2 {
-  color: white; /* Section heading color */
-  font-size: 2em; /* Font size for section headings */
-  margin-bottom: 15px; /* Space below section headings */
-}
+
   .project-list {
     display: flex;
     flex-wrap: wrap;
@@ -116,75 +113,75 @@ export default {
   }
 
   .project-card {
-  margin: 10px; /* Space between project cards */
-  flex: 1 1 calc(30% - 20px); /* Responsive card width */
-  max-width: 300px; /* Max width for project cards */
-  background-color: #34495E; /* Card background color */
-  border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* Hide overflow */
-  transition: transform 0.3s,  box-shadow 0.3s; /* Smooth hover effect */
+  margin: 10px;
+  flex: 1 1 calc(30% - 20px); 
+  max-width: 300px; 
+  background-color: #34495E; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  transition: transform 0.3s,  box-shadow 0.3s;
 }
 
 .project-card:hover {
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1.05); 
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 .project-card img {
-  width: 100%; /* Full width for images height: auto; /* Maintain aspect ratio */
+  width: 100%; 
 }
 
 .project-card h3 {
-  color: #AED6F1; /* Title color */
-  padding: 10px; /* Padding for title */
-  font-size: 1.5em; /* Title font size */
+  color: #AED6F1; 
+  padding: 10px; 
+  font-size: 1.5em; 
 }
 
 .project-card p {
-  color: rgba(255, 255, 255, 0.8); /* Description color */
-  padding: 0 10px 10px; /* Padding for description */
-  font-size: 1em; /* Description font size */
+  color: rgba(255, 255, 255, 0.8); 
+  padding: 0 10px 10px; 
+  font-size: 1em; 
 }
 
 .project-card a {
-  display: block; /* Make link block-level */
-  text-align: center; /* Center the link */
-  padding: 10px; /* Padding for link */
-  background-color: #AED6F1; /* Link background color */
-  color: #2C3E50; /* Link text color */
-  text-decoration: none; /* Remove underline */
-  border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
-  transition: background-color 0.3s; /* Smooth hover effect */
+  display: block; 
+  text-align: center; 
+  padding: 10px; 
+  background-color: #AED6F1; 
+  color: #2C3E50; 
+  text-decoration: none; 
+  border-radius: 0 0 8px 8px; 
+  transition: background-color 0.3s; 
 }
 
 
-/* Media Queries for Responsive Design */
+/*tablet*/
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5em; /* Smaller font size for tablet */
+    font-size: 2.5em; 
   }
 
   h2 {
-    font-size: 1.8em; /* Smaller section heading size */
+    font-size: 1.8em; 
   }
 
   .project-card {
-    flex: 1 1 calc(45% - 20px); /* Adjust card width for tablets */
-    max-width: none; /* Remove max width for better responsiveness */
+    flex: 1 1 calc(45% - 20px); 
+    max-width: none; 
   }
 }
-
+/*mobile*/
 @media (max-width: 480px) {
   h1 {
-    font-size: 2em; /* Further reduce font size for mobile */
+    font-size: 2em; 
   }
 
   h2 {
-    font-size: 1.5em; /* Further adjust section heading size */
+    font-size: 1.5em; 
   }
 
   .project-card {
-    flex: 1 1 100%; /* Full width for project cards on mobile */
-    margin: 10px 0; /* Adjust margin for better spacing */
+    flex: 1 1 100%; 
+    margin: 10px 0; 
   }
 }
 

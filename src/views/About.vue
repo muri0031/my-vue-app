@@ -5,7 +5,6 @@ export default {
 </script>
 
 <template>
-   <!-- Banner Section -->
    <div class="banner">
     <h1>Turning your ideas into code, no console errors included!</h1> 
   </div>
@@ -27,7 +26,6 @@ export default {
         <img src="/karla.png" alt="About Me" />
       </div>
     </div>
-
     <div class="button-container">
       <router-link to="/contact">
         <button class="primary-button">Contact Me</button>
@@ -38,7 +36,22 @@ export default {
 </template>
 
 <style>
-
+h2 {
+  font-family: 'Nunito', sans-serif; 
+  font-size: 1.8em; 
+  color:white;
+  text-align: left; 
+  margin-bottom: 20px; 
+}
+p {
+  font-family: 'Inter', sans-serif; 
+  font-size: 1.3em; 
+  line-height: 1.6; 
+  color:white; 
+  margin-bottom: 15px; 
+ 
+}
+/*banner*/
 .banner {
   background-color: #AED6F1; 
   padding: 40px;
@@ -56,6 +69,7 @@ export default {
   color: #2C3E50; 
   margin: 0; 
 }
+/*about*/
 .about-container {
   max-width: 1000px; 
   margin: 0 auto; 
@@ -66,16 +80,6 @@ color: white;
 .about-container h1{
   text-align:left;
   color:#AED6F1;
-}
-
-
-
-h2 {
-  font-family: 'Nunito', sans-serif; 
-  font-size: 1.8em; 
-  color:white;
-  text-align: left; 
-  margin-bottom: 20px; 
 }
 
 .content-row {
@@ -97,16 +101,9 @@ h2 {
   width: 200%; 
   height: auto; 
   border-radius: 8px;
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 
-p {
-  font-family: 'Inter', sans-serif; 
-  font-size: 1.3em; 
-  line-height: 1.6; 
-  color:white; 
-  margin-bottom: 15px; 
- 
-}
 
 .lets-create{
   color:  #AED6F1;
@@ -129,7 +126,7 @@ border-radius: 15px;
 margin: 0 10px;
 transition: .3s;
 background-color: #AED6F1;
-border: none; /* Add this line to remove the border */
+border: none; 
 
 }
 
@@ -145,61 +142,60 @@ strong {
 }
 
 
-/* Media Queries for Responsive Design */
+/*tablet*/
 @media (max-width: 768px) {
-  .banner h1 {
-    font-size: 2em; /* Smaller font size for mobile */
+  p {
+    font-size: 1.1em; 
   }
-
+  /*banner*/
+  .banner h1 {
+    font-size: 2em; 
+  }
+/*about*/
   .about-container h1 {
-    font-size: 1.5em; /* Adjust heading size */
+    font-size: 1.5em; 
   }
 
   .content-row {
-    flex-direction: column; /* Stack content vertically */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
   .text-content {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
+    margin-right: 0; 
+    margin-bottom: 20px; 
   }
 
   .image-about {
-    flex: 0 0 100%; /* Full width for image */
-    text-align: center; /* Center image */
+    flex: 0 0 100%; 
+    text-align: center; 
   }
 
   .image-about img {
-    width: 100%; /* Make image responsive */
+    width: 100%; 
     height: auto; 
   }
-
-  p {
-    font-size: 1.1em; /* Smaller font size for paragraphs */
-  }
-
   .primary-button {
-    width: 100%; /* Full width button */
-    font-size: 1.2em; /* Smaller font size for button */
+    width: 100%; 
+    font-size: 1.2em; 
   }
 }
-
+/*mobile*/
 @media (max-width: 480px) {
-  .banner h1 {
-    font-size: 1.5em; /* Even smaller font size for very small screens */
-  }
-
-  .about-container h1 {
-    font-size: 1.3em; /* Further adjust heading size */
-  }
-
   p {
-    font-size: 1em; /* Further reduce paragraph font size */
+    font-size: 1em; 
+  }
+  /*banner*/
+  .banner h1 {
+    font-size: 1.5em; 
+  }
+/*about*/
+  .about-container h1 {
+    font-size: 1.3em; 
   }
 
   .primary-button {
-    font-size: 1em; /* Further reduce button font size */
+    font-size: 1em; 
   }
 }
     </style>

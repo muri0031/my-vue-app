@@ -25,14 +25,14 @@ export default {
     width: 300px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
+    display: flex; 
+  flex-direction: column;
   justify-content: space-between; 
   }
   
   .project-card img {
     max-width: 100%;
-    height: 200px; /* Fixed height for images */
+    height: 200px; 
     object-fit: cover;
     border-radius: 4px;
   }
@@ -43,9 +43,9 @@ export default {
   
   
 .project-card p {
-  color: rgba(255, 255, 255, 0.8); /* Description color */
-  padding: 0 10px 10px; /* Padding for description */
-  font-size: 1em; /* Description font size */
+  color: rgba(255, 255, 255, 0.8); 
+  padding: 0 10px 10px; 
+  font-size: 1em; 
 }
 
   .project-card a {
@@ -54,14 +54,14 @@ export default {
   }
   
 .project-link {
-  display: inline-block; /* Make it a block element */
-  padding: 10px 20px; /* Padding for the link */
+  display: inline-block; 
+  padding: 10px 20px; 
   background-color: #AED6F1;
-  color: #2C3E50; /* Button text color */
-  text-decoration: none; /* Remove underline */
-  border-radius: 4px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth hover effect */
-  margin-top: 10px; /* Space above the link */
+  color: #2C3E50;
+  text-decoration: none; 
+  border-radius: 4px; 
+  transition: background-color 0.3s; 
+  margin-top: 10px; 
   font-weight: 400;
 }
 

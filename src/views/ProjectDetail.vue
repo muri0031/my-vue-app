@@ -7,20 +7,81 @@ export default {
     };
   },
   created() {
-    const projectId = this.$route.params.id; // Get the project ID from the route
+    const projectId = this.$route.params.id; 
     this.fetchProjectDetails(projectId);
   },
   methods: {
     fetchProjectDetails(id) {
-      // Simulate fetching project details based on the ID
+    
       const projects = [
-        {
-          id: 'my-portfolio',
-          title: 'My Portfolio',
-          description: 'My portfolio is a project I built from scratch! ✨ I started with research to understand my target audience and then picked the perfect colors and typography to match the vibe. I created mood boards, wireframes, and a prototype to plan everything out. Finally, I brought it to life using HTML, CSS, and JavaScript. It’s a space where I can showcase my work and creativity!',
-          image: '/my-portfolio.jpg',
-          link: 'https://https://www.figma.com/design/or85Fy6cqOvEy4vueyPELV/Live-home-hi-fi-mobile?node-id=202-3957&t=gD5ktCCAuF0pxwiL-1',
+       {
+        id: 'my-portfolio',
+      title: 'My Portfolio',
+      description: 'My portfolio is a project I built from scratch! ✨ I started with research to understand my target audience and then picked the perfect colors and typography to match the vibe. I created mood boards, wireframes, and a prototype to plan everything out. Finally, I brought it to life using HTML, CSS, and JavaScript. It’s a space where I can showcase my work and creativity!',
+      image: '/my-portfolio.jpg',
+      link: 'https://www.figma.com/design/or85Fy6cqOvEy4vueyPELV/Live-home-hi-fi-mobile?node-id=202-3957&t=gD5ktCCAuF0pxwiL-1',
+      caseStudy: {
+        projectOverview: "To create a portfolio that effectively showcases my skills and attracts diverse audiences, I followed a structured process. This included conducting in-depth research, developing audience personas, creating a moodboard, and drafting a creative brief. These steps helped me define the goals and tone of my portfolio while ensuring it resonates with potential employers, freelance clients, and collaborators.",
+        audienceResearch: [
+          {
+            audience: "Main Audience: Companies & Employers",
+            details: {
+              ages: "25-50",
+              jobs: "Hiring managers, HR professionals, team leads",
+              education: "College or university graduates with tech, business, or design backgrounds",
+              values: "Creativity, efficiency, and innovation"
+            }
+          },
+          {
+            audience: "Second Audience: Freelancers & Small Business Owners",
+            details: {
+              ages: "25-50",
+              jobs: "Entrepreneurs, start-up founders, and small business owners",
+              education: "College-educated, many with business backgrounds",
+              values: "Affordability, flexibility, and creativity",
+              goals: "Building an online presence that fits their brand and supports growth"
+            }
+          },
+          {
+            audience: "Third Audience: Collaborators & Creatives",
+            details: {
+              ages: "20-45",
+              jobs: "Web designers, developers, UI/UX designers",
+              education: "Degrees in tech or design fields",
+              values: "Collaboration, creativity, and innovation",
+              goals: "Connecting, working on exciting projects, and sharing inspiration"
+            }
+          }
+        ],
+        personas: [
+          {
+            persona: "Persona 1",
+            description: "Hiring manager seeking a reliable designer to build engaging websites for their company’s brand."
+          },
+          {
+            persona: "Persona 2",
+            description: "Small business owner needing an affordable yet professional online presence."
+          },
+          {
+            persona: "Persona 3",
+            description: "Developer looking for collaboration opportunities to create innovative projects."
+          }
+        ],
+        creativeBrief: {
+          keyMessage: "Need a website that stands out? I’m here to help you build or improve your site, making it functional, beautiful, and attention-grabbing. Whether it’s for a small project or a big team, I’ll make sure it fits your needs perfectly.",
+          tone: "Casual yet professional to make the portfolio relatable to all audiences.",
+          goals: "Showcase my skills and experience while providing clear pathways for potential clients or collaborators to connect with me.",
+          images: {
+            creativeBrief1: '/creativebriefp.jpg',
+            creativeBrief2: '/creativebrief2p.jpg',
+            persona1: '/persona1p.jpg',
+            persona2: '/persona2p.jpg',
+            persona3: '/persona3p.jpg',
+        }
         },
+        results: "By following this process, I built a portfolio that speaks directly to each audience’s needs. It highlights my skills in web design and development and positions me as a creative and reliable professional ready to deliver quality results."
+      }
+    },
         {
           id: 'live-home',
           title: 'Live Home',
@@ -102,7 +163,9 @@ export default {
         </div>
       </div>
     </div>
-      <!-- Case Study Section for LiveHome -->
+
+
+      <!----------------------------LiveHome page ---------------------------->
       <div v-if="project.id === 'live-home'" class="case-study">
         <h2>Case Study Details</h2>
         <h3>Purpose of the Project</h3>
@@ -127,7 +190,7 @@ export default {
         <h3>Problem Statement</h3>
     <p>{{ project.caseStudy.problemStatement.finalStatement }}</p>
       </div>
-       <!-- Display Images for Personas and Moodboard -->
+       
     <div v-if="project.id === 'live-home'" class="images-container">
       <h2>Personas</h2>
       <div class="persona-images">
@@ -140,175 +203,362 @@ export default {
       <h2>App Flow</h2>
       <img :src="project.caseStudy.images.appFlow" alt="App Flow" />
     </div>
+
+
+    
+    <!---------------------------------------My Portfolio page ------------------------------>
+<div v-if="project.id === 'my-portfolio'" class="case-study">
+  <h2>Case Study Details</h2>
+  
+  <h3>Project Overview</h3>
+  <p>{{ project.caseStudy.projectOverview }}</p>
+  
+  <h3>Audience Research</h3>
+  <table class="audience-research-table">
+    <thead>
+      <tr>
+        <th>Audience</th>
+        <th>Ages</th>
+        <th>Jobs</th>
+        <th>Education</th>
+        <th>Values</th>
+        <th>Goals</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="audience in project.caseStudy.audienceResearch" :key="audience.audience">
+        <td>{{ audience.audience }}</td>
+        <td>{{ audience.details.ages }}</td>
+        <td>{{ audience.details.jobs }}</td>
+        <td>{{ audience.details.education }}</td>
+        <td>{{ audience.details.values }}</td>
+        <td v-if="audience.details.goals">{{ audience.details.goals }}</td>
+        <td v-else>-</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h3 class="headingh">Personas</h3>
+  <div class="personas-container">
+  <div class="persona-column" v-for="persona in project.caseStudy.personas" :key="persona.persona">
+    <h4>{{ persona.persona }}</h4>
+    <p>{{ persona.description }}</p>
+  </div>
+</div>
+  <div class="images-container">
+    <img :src="project.caseStudy.creativeBrief.images.persona1" alt="Persona 1 Image" class="case-study-image" />
+    <img :src="project.caseStudy.creativeBrief.images.persona2" alt="Persona 2 Image" class="case-study-image" />
+    <img :src="project.caseStudy.creativeBrief.images.persona3" alt="Persona 3 Image" class="case-study-image" />
+  </div>
+
+  
+  <h3 class="headingh">Creative Brief</h3>
+  <table class="creative-brief-table">
+  <thead>
+    <tr>
+      <th>Key Message</th>
+      <th>Tone</th>
+      <th>Goals</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ project.caseStudy.creativeBrief.keyMessage }}</td>
+      <td>{{ project.caseStudy.creativeBrief.tone }}</td>
+      <td>{{ project.caseStudy.creativeBrief.goals }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="images-container">
+    <img :src="project.caseStudy.creativeBrief.images.creativeBrief1" alt="Creative Brief Image 1" class="case-study-image" />
+    <img :src="project.caseStudy.creativeBrief.images.creativeBrief2" alt="Creative Brief Image 2" class="case-study-image" />
+  </div>
+  <h3 class="headingh">Results</h3>
+  <p class="final">{{ project.caseStudy.results }}</p>
+  </div>
   </template>
 
   
 <style scoped>
-
+/*general*/
+h3{
+    color: #AED6F1;
+    text-align: center;
+    font-size: 1.5em;
+}
+h2{
+    text-align: center;
+}
 .project-detail-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  min-height: 100vh; /* Full height of the viewport */
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
   background: radial-gradient(circle, rgba(44, 62, 80, 0.8), rgba(0, 0, 0, 0.8)); /* Gradient background */
 }
 
 .project-detail {
-  display: flex; /* Use flexbox for side-by-side layout */
-  max-width: 1000px; /* Limit the width of the content */
+  display: flex; 
+  max-width: 1000px; 
   padding: 20px;
   color: white;
-  /*background-color: rgba(44, 62, 80, 0.9);  Slightly more opaque background */
-  border-radius: 12px; /* Rounded corners */
+  border-radius: 12px;
   align-items: center;
 }
-
-.image-container {
-  flex: 2; /* Allow the image container to take up space */
-  margin-right: 20px; /* Space between image and description */
-  display: flex; /* Use flexbox for vertical alignment */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-start;
-}
-
-.image-container img {
-  max-width: 100%; 
-  border-radius: 8px; /* Rounded corners for images */
-}
-
 .description-container {
-  flex: 1; /* Allow the description container to take up more space */
+  flex: 1; 
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-start; /* Center items vertically */
+  flex-direction: column; 
+  justify-content: flex-start; 
 }
 
 .button-container {
-  margin-bottom: 20px; /* Space between the button and the image */
+  margin-bottom: 20px; 
   align-self: flex-start;
 }
 
+/*go back button*/
 .go-back-button {
-  display: inline-block; /* Make it a block element */
+  display: inline-block; 
   color: white; 
   text-decoration: none; 
-  font-size: 1.3em; /* Font size */
+  font-size: 1.3em; 
+  padding: 0px 10px; 
+  background-color: #2C3E50; 
+  border-radius: 8px; 
+  transition: background-color 0.3s, transform 0.3s; 
+  box-shadow: 0 0 10px rgba(174, 214, 241, 0.5); 
 }
 
 .go-back-button:hover {
-  color: white; /* Change text color on hover */
-  transform: scale(1.05); /* Slightly scale up on hover */
+  background-color: #AED6F1; 
+  color: #2C3E50; 
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
+
+/*view project button*/
 .view-project-button {
-  display: inline-block; /* Make it a block element */
-  padding: 10px 20px; /* Padding for the button */
-  background-color: #AED6F1; /* Button background color */
-  color: #2C3E50; /* Button text color */
-  text-decoration: none; /* Remove underline */
-  border-radius: 8px; /* Rounded corners */
-  font-size: 1.2em; /* Font size */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #AED6F1; 
+  color: #2C3E50; 
+  text-decoration: none; 
+  border-radius: 8px; 
+  font-size: 1.2em; 
+  transition: background-color 0.3s, transform 0.3s; 
   font-weight:400;
   text-align: center;
 }
 
 .view-project-button:hover {
-  background-color: #2C3E50; /* Darker background on hover */
-  color: white; /* Change text color on hover */
-  transform: scale(1.05); /* Slightly scale up on hover */
+  background-color: #2C3E50; 
+  color: white; 
+  transform: scale(1.05); 
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
+
+/*****************************live home page************************/
 .case-study{
     width: 80%;
     margin-left:15%;
 }
+.case-study-image {
+  width: 200px; 
+  height: auto; 
+  border-radius: 8px; 
+  margin: 10px; 
+  object-fit: cover; 
+}
 
-h3{
-    color: #AED6F1;
-}
-h2{
-    text-align: center;
-}
 
-.images-container{
-    width:80%;
-}
 .images-container {
-  width:70%; 
-  margin-left: 15%; /* Center the images section */
-  margin-top: 20px; /* Space above the images section */
-  color: white; /* Text color */
-  text-align: center; /* Center text */
+  width: 80%; 
+  margin: 20px auto; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  flex: 2; 
+  margin-right: 20px; 
+  flex-direction: column; 
+  justify-content: flex-start;
+  margin-left: 15%; 
+  margin-top: 20px; 
+  color: white; 
+  text-align: center; 
 }
 
+.image-container img {
+  max-width: 100%; 
+  border-radius: 8px; 
+  margin-top: 10px; 
+}
+
+/*personas*/
+.headingh{
+    margin-top: 70px;
+}
 .persona-images {
-  justify-content: center; /* Center the images */
-  margin-bottom: 20px; /* Space below the persona images */
+  justify-content: center; 
+  margin-bottom: 20px;
   margin-bottom: 20px;
 }
 
 .persona-images img {
-    width: 200px; /* Set a fixed width for persona images */
-    height: 400;
-  border-radius: 8px; /* Rounded corners for images */
-  object-fit: cover; /* Maintain aspect ratio while filling the box */
-  margin: 0 10px; /* Space between images */
+  width: 200px; 
+  height: 400;
+  border-radius: 8px; 
+  object-fit: cover; 
+  margin: 0 10px; 
 }
 
-.images-container img {
-  width: 100%; /* Full width for moodboard and app flow images */
-  border-radius: 8px; /* Rounded corners for images */
-  margin-top: 10px; /* Space above the images */
+/************************My portfolio page*************************************/
+/*personas*/
+.personas-container {
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+  margin: 20px 0; 
+}
+
+.persona-column {
+  flex: 1; 
+  min-width: 200px; 
+  margin: 10px; 
+  background-color: rgba(44, 62, 80, 0.9); 
+  border-radius: 8px; 
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(174, 214, 241, 0.5); 
+  color: white; 
+}
+
+/*audience*/
+.audience-research-table {
+  width: 100%; 
+  border-collapse: collapse; 
+  margin: 20px 0; 
+  color: white; 
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6); /* Box shadow */
+  border-radius: 8px; 
+  overflow: hidden; 
+}
+
+.audience-research-table th,
+.audience-research-table td {
+  border: 1px solid  #2C3E50; 
+  padding: 10px; 
+  text-align: left; 
+}
+
+.audience-research-table th {
+  background-color:  #AED6F1; 
+  color: #2C3E50; 
+}
+
+.audience-research-table tr:nth-child(even) {
+  background-color: rgba(174, 214, 241, 0.1); 
+}
+
+.audience-research-table tr:hover {
+  background-color: rgba(174, 214, 241, 0.3);
+}
+
+/*creative brief*/
+.creative-brief-table {
+  width: 100%; 
+  border-collapse: collapse; 
+  margin: 20px 0; 
+  color: white; 
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6); /* Box shadow */
+  border-radius: 8px; 
+  overflow: hidden; 
+}
+
+.creative-brief-table th,
+.creative-brief-table td {
+  border: 1px solid #2C3E50; 
+  padding: 10px; 
+  text-align: left; 
+}
+
+.creative-brief-table th {
+  background-color: #AED6F1; 
+  color: #2C3E50; 
+}
+
+.creative-brief-table tr:nth-child(even) {
+  background-color: rgba(174, 214, 241, 0.1); 
+}
+
+.creative-brief-table tr:hover {
+  background-color: rgba(174, 214, 241, 0.3); 
+}
+
+.final{
+    margin-bottom: 70px;
 }
 
 
-/* Media Queries for Responsiveness */
+/*tablet*/
 @media (max-width: 768px) {
+    /*general*/
   .project-detail {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    padding: 10px; /* Reduce padding */
+    flex-direction: column; 
+    padding: 10px; 
   }
 
   .image-container {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 20px; /* Add space below the image */
+    margin-right: 0; 
+    margin-bottom: 20px; 
   }
 
   .description-container {
-    text-align: center; /* Center text on smaller screens */
+    text-align: center; 
   }
-
+  .go-back-button {
+    display: none; 
+  }
   .go-back-button, .view-project-button {
-    font-size: 1em; /* Adjust button font size */
+    font-size: 1em; 
   }
-
+/**************************************Live Home Page************************** */
   .persona-images {
-    flex-direction: column; /* Stack images vertically on smaller screens */
-    align-items: center; /* Center images horizontally */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .persona-images img {
-    margin: 10px 0; /* Space between images */
-    width: 80%; /* Adjust width for smaller screens */
+    margin: 10px 0; 
+    width: 80%; 
   }
-  .go-back-button {
-    display: none; /* Hide the button */
+ 
+  .case-study-image {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+
+  /*********************************portfolio page***********************************/
+  .personas-container {
+    flex-direction: column; 
+  }
+  .creative-brief-table {
+    font-size: 0.9em; 
   }
 }
 
 @media (max-width: 480px) {
   .go-back-button, .view-project-button {
-    font-size: 0.9em; /* Further reduce button font size */
+    font-size: 0.9em; 
   }
 
   .case-study {
-    width: 90%; /* Make case study section wider */
-    margin-left: 5%; /* Center it */
+    width: 90%; 
+    margin-left: 5%; 
   }
 
   .images-container {
-    width: 90%; /* Make images section wider */
-    margin-left: 5%; /* Center it */
+    width: 90%; 
+    margin-left: 5%; 
   }
 }
 

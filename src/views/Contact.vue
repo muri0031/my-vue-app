@@ -13,7 +13,7 @@ export default {
   methods: {
     handleSubmit() {
       const mailtoLink = `mailto:karlitam21@hotmail.com?subject=Message from ${this.name}&body=${encodeURIComponent(this.message)}%0D%0AFrom: ${this.email}`;
-      window.location.href = mailtoLink; // Open the email client
+      window.location.href = mailtoLink; 
       this.submitted = true; 
       this.resetForm();
     },
@@ -93,7 +93,19 @@ export default {
 </template>
 
 <style scoped>
-
+h1 {
+  text-align: center; 
+  color: #AED6F1; 
+  font-size:3em;
+  margin-bottom: 5px;
+}
+h2{
+    color: #AED6F1;
+}
+p {
+  text-align: center; 
+}
+/*image*/
 .header-image {
   flex: 1; 
   display: flex;
@@ -111,6 +123,7 @@ export default {
   height: auto; 
   border-radius: 8px; 
 }
+/*info*/
 .contact-page {
   max-width: 1200px;  min-height: 100vh;margin: 0 auto;
   min-height: 100vh; 
@@ -136,22 +149,27 @@ export default {
   display: flex;
   flex-direction: column;
 }
+.social-media a {
+  color: #AED6F1;
+  text-decoration: none; 
+  display: flex;
+  align-items: center;
+}
 
+.social-media a i {
+  margin-right: 8px; 
+}
+ul li{
+    list-style:none;
+}
+/*contact form*/
 .contact-container {
   flex: 1; 
   background-color: #2C3E50; 
   padding: 20px; 
   border-radius: 8px; 
 }
-h1 {
-  text-align: center; 
-  color: #AED6F1; 
-  font-size:3em;
-  margin-bottom: 5px;
-}
-h2{
-    color: #AED6F1;
-}
+
 
 .form-group {
   margin-bottom: 15px; 
@@ -202,75 +220,63 @@ textarea:focus {
   text-align: center; 
   color: #AED6F1; 
 }
-p {
-  text-align: center; 
-}
-.social-media a {
-  color: #AED6F1;
-  text-decoration: none; 
-  display: flex;
-  align-items: center;
-}
-
-.social-media a i {
-  margin-right: 8px; 
-}
-ul li{
-    list-style:none;
-}
 
 
-/* Media Queries for Responsive Design */
+
+
+/* tablet */
 @media (max-width: 768px) {
-  .info-container {
-    flex-direction: column; /* Stack elements vertically */
-  }
-
-  .social-media {
-    padding: 10px; /* Reduce padding */
-  }
-
   h1 {
-    font-size: 2.5em; /* Smaller font size for mobile */
+    font-size: 2.5em; 
   }
 
   h2 {
-    font-size: 1.8em; /* Adjust heading size */
-  }
-
-  .form-group {
-    margin-bottom: 10px; /* Reduce margin */
-  }
-
-  .submit-button {
-    font-size: 1em; /* Smaller button font size */
+    font-size: 1.8em; 
   }
 
   .p-info {
-    padding-left: 10px; /* Reduce padding */
+    padding-left: 10px; 
   }
+  .info-container {
+    flex-direction: column; 
+  }
+
+  .social-media {
+    padding: 10px; 
+  }
+
+  /*contact form*/
+  .form-group {
+    margin-bottom: 10px; 
+  }
+
+  .submit-button {
+    font-size: 1em; 
+  }
+
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2em; /* Further reduce font size for very small screens */
+    font-size: 2em; 
   }
 
   h2 {
-    font-size: 1.5em; /* Further adjust heading size */
+    font-size: 1.5em; 
   }
-
+  
+/*contacto form*/
   input,
   textarea {
-    width: 90; /* Full width for inputs */
+    width: 90; 
   }
 
   .submit-button {
-    width: 90; /* Full width button */
+    width: 90; 
   }
 
   .p-info {
-    padding-left: 5px; /* Further reduce padding */
+    padding-left: 5px; 
   }
 }
 </style>

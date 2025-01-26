@@ -12,7 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html, body {
-  height: 100%; /* Ensure both html and body take full height */
+  height: 100%; 
   margin: 0;
 }
 
@@ -34,9 +34,9 @@ body {
 }
 
 .button-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Center buttons horizontally */
-  margin-top: 20px; /* Space above the buttons */
+  display: flex; 
+  justify-content: space-around; 
+  margin-top: 20px; 
 }
 
 button{
@@ -50,7 +50,7 @@ border-radius: 15px;
 margin: 0 10px;
 transition: .3s;
 background-color: #AED6F1;
-border: none; /* This will remove the border from all buttons */
+border: none; 
   outline: none;
 }
 
@@ -60,7 +60,7 @@ cursor: pointer;
 color:white;
 opacity: 8;
 transition: .3s;
-transform: scale(1.05); /* Scale up on hover */
+transform: scale(1.05); 
 box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 
@@ -231,41 +231,41 @@ outline: none;
 
 /* Header*/
 .content-wrapper {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-start; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  height: 100vh; /* Full height of the viewport */
-  margin: 0; /* Remove default margin */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  height: 100vh; 
+  margin: 0; 
   padding-top: 105px;
 }
 
 .head-container {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  text-align: center; /* Center text */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
   margin-bottom: 20px;
 }
 .header{
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   color: white;
-  padding: 4px; /* Reduced padding to bring headers closer */
-  margin: 0; /* Remove default margin */
+  padding: 4px; 
+  margin: 0; 
   font-size: 4.3em;
-  opacity: 0; /* Start hidden */
-  animation: fadeIn 1s forwards; /* Fade in animation */
+  opacity: 0; 
+  animation: fadeIn 1s forwards; 
 }
 
 .welcome-text {
-  color: white; /* Set color for welcome text */
+  color: white; 
  
   
 }
 
 .name-text {
-  color: #AED6F1; /* Set color for name text */
+  color: #AED6F1; 
   
   margin-left: 20px;
 }
@@ -278,16 +278,16 @@ animation: fadeIn 1s forwards;
 }
 
 #head1{
-  animation-delay: 0s; /* No delay for the first header */
+  animation-delay: 0s; 
 }
 
 #head2{
-  animation-delay: 3s; /* Delay for the second header */
+  animation-delay: 3s; 
 }
 
 
 #head3{
-  animation-delay: 6s; /* Delay for the third header */
+  animation-delay: 6s;
 }
 
 
@@ -384,42 +384,42 @@ transform: translate(95vw,90vh);
 }
 
 
-/* Responsive Styles */
-@media (max-width: 768px) { /* Tablet */
+/*tablet*/
+@media (max-width: 768px) { 
   body{
     background-color: #000000;
   }
   .header {
-    font-size: 3em; /* Smaller font size for tablets */
+    font-size: 3em; 
   }
 
   button {
-    width: 200px; /* Smaller button width */
-    height: 45px; /* Smaller button height */
-    font-size: 1.5em; /* Smaller font size */
+    width: 200px; 
+    height: 45px; 
+    font-size: 1.5em; 
   }
 
   .content-wrapper {
-    padding-top: 80px; /* Adjust padding for smaller screens */
+    padding-top: 80px; 
   }
 }
-
-@media (max-width: 480px) { /* Mobile */
+/* Mobile */
+@media (max-width: 480px) { 
   body{
     background-color: #000000;
   }
   .header {
-    font-size: 2.5em; /* Smaller font size for mobile */
+    font-size: 2.5em; 
   }
 
   button {
-    width: 150px; /* Smaller button width */
-    height: 40px; /* Smaller button height */
-    font-size: 1.2em; /* Smaller font size */
+    width: 150px; 
+    height: 40px; 
+    font-size: 1.2em; 
   }
 
   .content-wrapper {
-    padding-top: 60px; /* Adjust padding for mobile */
+    padding-top: 60px; 
   }
 }
 

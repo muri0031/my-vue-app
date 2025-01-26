@@ -9,17 +9,16 @@ export default {
         { name: 'Work', path: '/Work' },
         { name: 'Contact', path: '/contact' },
       ],
-      isMenuOpen: false, // State to track if the menu is open
+      isMenuOpen: false, 
     };
   },
   methods: {
     toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen; // Toggle the menu open/close state
+      this.isMenuOpen = !this.isMenuOpen; 
     },
   },
 };
 </script>
-
 <template>
     <nav class="nav-menu">
     <div class="burger" @click="toggleMenu">
@@ -40,11 +39,11 @@ export default {
   padding: 10px;
   padding-top: 50px;
   padding-right: 100px;
-  position: relative; /* Position relative for absolute positioning of the menu */
+  position: relative; 
 }
 
 .burger {
-  display: none; /* Hide burger menu by default */
+  display: none; 
   flex-direction: column;
   cursor: pointer;
 }
@@ -87,46 +86,48 @@ export default {
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) { /* Tablet and smaller */
+/* Tablet size */
+@media (max-width: 768px) { 
   .burger {
-    display: flex; /* Show burger menu on smaller screens */
+    display: flex; 
   }
 
   .nav-menu ul {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
-    gap: 20px; /* Reduce gap between items */
-    font-size: 1.2em; /* Slightly smaller font size */
-    position: absolute; /* Position the menu absolutely */
-    top: 60px; /* Position below the burger */
-    right: 0; /* Align to the right */
-    background-color: rgba(44, 62, 80, 0.9); /* Background color for the menu */
-    padding: 20px; /* Padding for the menu */
-    display: none; /* Hide the menu by default */
-    z-index: 1000; /* Ensure it appears above other content */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 20px; 
+    font-size: 1.2em; 
+    position: absolute; 
+    top: 60px; 
+    right: 0; 
+    background-color: rgba(44, 62, 80, 0.9); 
+    padding: 20px; 
+    display: none; 
+    z-index: 1000;
   }
 
   .nav-menu ul.open {
-    display: flex; /* Show the menu when open */
+    display: flex;
   }
 
   .nav-menu li {
-    margin-left: 0; /* Remove left margin */
+    margin-left: 0; 
   }
 }
 
-@media (max-width: 480px) { /* Phone size */
+
+/*mobile*/
+@media (max-width: 480px) { 
   .nav-menu {
-    padding-right: 10px; /* Further reduce right padding */
+    padding-right: 10px; 
   }
 
   .nav-menu ul {
-    font-size: 1em; /* Smaller font size for mobile */
+    font-size: 1em; 
   }
 
   .nav-menu a {
-    padding: 8px; /* Adjust padding for smaller buttons */
+    padding: 8px; 
   }
 }
 </style>
