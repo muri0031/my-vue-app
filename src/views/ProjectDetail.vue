@@ -296,15 +296,34 @@ h2{
   min-height: 100vh; 
   background: radial-gradient(circle, rgba(44, 62, 80, 0.8), rgba(0, 0, 0, 0.8)); /* Gradient background */
 }
-
 .project-detail {
   display: flex; 
   max-width: 1000px; 
   padding: 20px;
   color: white;
-  border-radius: 12px;
+  border-radius: 12px; 
   align-items: center;
 }
+.images-container {
+  width: 80%; 
+  margin: 20px auto; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+.image-container {
+  flex: 2; 
+  margin-right: 20px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start;
+}
+
+.image-container img {
+  max-width: 100%; 
+  border-radius: 8px; 
+}
+
 .description-container {
   flex: 1; 
   display: flex;
@@ -312,12 +331,12 @@ h2{
   justify-content: flex-start; 
 }
 
+/*go back button*/
 .button-container {
   margin-bottom: 20px; 
   align-self: flex-start;
 }
 
-/*go back button*/
 .go-back-button {
   display: inline-block; 
   color: white; 
@@ -331,7 +350,7 @@ h2{
 }
 
 .go-back-button:hover {
-  background-color: #AED6F1; 
+  background-color: #AED6F1;
   color: #2C3E50; 
   transform: scale(1.05); 
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
@@ -350,7 +369,6 @@ h2{
   font-weight:400;
   text-align: center;
 }
-
 .view-project-button:hover {
   background-color: #2C3E50; 
   color: white; 
@@ -358,7 +376,8 @@ h2{
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6);
 }
 
-/*****************************live home page************************/
+
+/*************************************live home page****************************************/
 .case-study{
     width: 80%;
     margin-left:15%;
@@ -370,28 +389,12 @@ h2{
   margin: 10px; 
   object-fit: cover; 
 }
-
-
 .images-container {
-  width: 80%; 
-  margin: 20px auto; 
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center; 
-  flex: 2; 
-  margin-right: 20px; 
-  flex-direction: column; 
-  justify-content: flex-start;
+  width:70%; 
   margin-left: 15%; 
   margin-top: 20px; 
   color: white; 
   text-align: center; 
-}
-
-.image-container img {
-  max-width: 100%; 
-  border-radius: 8px; 
-  margin-top: 10px; 
 }
 
 /*personas*/
@@ -400,19 +403,27 @@ h2{
 }
 .persona-images {
   justify-content: center; 
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
   margin-bottom: 20px;
 }
 
 .persona-images img {
-  width: 200px; 
-  height: 400;
+    width: 200px; 
+    height: 400;
   border-radius: 8px; 
   object-fit: cover; 
   margin: 0 10px; 
 }
 
-/************************My portfolio page*************************************/
+.images-container img {
+  width: 100%; 
+  border-radius: 8px; 
+  margin-top: 10px; 
+}
+
+
+/**********************************portfolio page*********************************/
+
 /*personas*/
 .personas-container {
   display: flex; 
@@ -423,21 +434,20 @@ h2{
 
 .persona-column {
   flex: 1; 
-  min-width: 200px; 
+  min-width: 200px;
   margin: 10px; 
   background-color: rgba(44, 62, 80, 0.9); 
   border-radius: 8px; 
-  padding: 15px;
+  padding: 15px; 
   box-shadow: 0 0 10px rgba(174, 214, 241, 0.5); 
   color: white; 
 }
-
 /*audience*/
 .audience-research-table {
   width: 100%; 
   border-collapse: collapse; 
   margin: 20px 0; 
-  color: white; 
+  color: white;
   box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6); /* Box shadow */
   border-radius: 8px; 
   overflow: hidden; 
@@ -460,7 +470,7 @@ h2{
 }
 
 .audience-research-table tr:hover {
-  background-color: rgba(174, 214, 241, 0.3);
+  background-color: rgba(174, 214, 241, 0.3); 
 }
 
 /*creative brief*/
@@ -468,8 +478,8 @@ h2{
   width: 100%; 
   border-collapse: collapse; 
   margin: 20px 0; 
-  color: white; 
-  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6); /* Box shadow */
+  color: white;
+  box-shadow: 0 0 20px rgba(174, 214, 241, 0.8), 0 0 40px rgba(174, 214, 241, 0.6); 
   border-radius: 8px; 
   overflow: hidden; 
 }
@@ -499,29 +509,32 @@ h2{
 }
 
 
-/*tablet*/
+/*tablets*/
 @media (max-width: 768px) {
     /*general*/
   .project-detail {
     flex-direction: column; 
-    padding: 10px; 
+    padding: 10px;
   }
 
   .image-container {
-    margin-right: 0; 
+    margin-right: 0;
     margin-bottom: 20px; 
   }
 
   .description-container {
     text-align: center; 
   }
+
   .go-back-button {
     display: none; 
   }
   .go-back-button, .view-project-button {
     font-size: 1em; 
   }
-/**************************************Live Home Page************************** */
+
+  /***********************live home page******************************/
+
   .persona-images {
     flex-direction: column; 
     align-items: center; 
@@ -537,7 +550,7 @@ h2{
     margin: 10px 0; 
   }
 
-  /*********************************portfolio page***********************************/
+  /******************************portfolio page**********************/
   .personas-container {
     flex-direction: column; 
   }
@@ -545,7 +558,7 @@ h2{
     font-size: 0.9em; 
   }
 }
-
+/*mobile*/
 @media (max-width: 480px) {
   .go-back-button, .view-project-button {
     font-size: 0.9em; 
@@ -553,7 +566,7 @@ h2{
 
   .case-study {
     width: 90%; 
-    margin-left: 5%; 
+    margin-left: 5%;
   }
 
   .images-container {
