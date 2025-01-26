@@ -168,39 +168,39 @@ export default {
       <!----------------------------LiveHome page ---------------------------->
       <div v-if="project.id === 'live-home'" class="case-study">
         <h2>Case Study Details</h2>
-        <h3>Purpose of the Project</h3>
+        <h3 class="hlive">Purpose of the Project</h3>
         <p>{{ project.caseStudy.purpose }}</p>
         
-        <h3>Project Timeline</h3>
+        <h3  class="hlive">Project Timeline</h3>
         <p>{{ project.caseStudy.timeline }}</p>
         
-        <h3>Target Market</h3>
+        <h3  class="hlive">Target Market</h3>
         <p>{{ project.caseStudy.targetMarket }}</p>
         
-        <h3>User Benefits</h3>
+        <h3  class="hlive">User Benefits</h3>
         <ul>
           <li v-for="benefit in project.caseStudy.userBenefits" :key="benefit">{{ benefit }}</li>
         </ul>
         
-        <h3>Key Message</h3>
+        <h3  class="hlive">Key Message</h3>
         <p>{{ project.caseStudy.keyMessage }}</p>
         
-        <h3>Unique Selling Point (USP)</h3>
+        <h3  class="hlive">Unique Selling Point (USP)</h3>
         <p>{{ project.caseStudy.uniqueSellingPoint }}</p>
-        <h3>Problem Statement</h3>
+        <h3  class="hlive">Problem Statement</h3>
     <p>{{ project.caseStudy.problemStatement.finalStatement }}</p>
       </div>
        
     <div v-if="project.id === 'live-home'" class="images-container">
-      <h2>Personas</h2>
+      <h2 class="h2l">Personas</h2>
       <div class="persona-images">
         <img :src="project.caseStudy.images.persona1" alt="Persona 1" />
         <img :src="project.caseStudy.images.persona2" alt="Persona 2" />
         <img :src="project.caseStudy.images.persona3" alt="Persona 3" />
       </div>
-      <h2>Moodboard</h2>
+      <h2 class="h2l">Moodboard</h2>
       <img :src="project.caseStudy.images.moodboard" alt="Moodboard" />
-      <h2>App Flow</h2>
+      <h2 class="h2l">App Flow</h2>
       <img :src="project.caseStudy.images.appFlow" alt="App Flow" />
     </div>
 
@@ -378,6 +378,12 @@ h2{
 
 
 /*************************************live home page****************************************/
+.hlive{
+    text-align: left;
+}
+.h2l{
+    color: #AED6F1;
+}
 .case-study{
     width: 80%;
     margin-left:15%;
